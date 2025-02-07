@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "my-django-app"
+version = "0.1.0"
+description = "Django application"
+authors = ["Your Name <you@example.com>"]
+package-mode = false
+
+# ✅ Ensure Poetry detects `django_project`
+packages = [{include = "django_project"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.11"
+gunicorn = "^23.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest-django = "^4.5.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
