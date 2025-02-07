@@ -1,10 +1,9 @@
 # 🌟 Django Project Name
 
-A Django-based web application for [describe purpose briefly]. This project is set up for **local testing** and includes instructions for **production deployment using S3, CloudFront, and PostgreSQL**.
+A Django-based web application for [describe purpose briefly]. 
 
 ![Django](https://img.shields.io/badge/Django-4.2-blue?style=flat&logo=django)  
 ![Python](https://img.shields.io/badge/Python-3.11-green?style=flat&logo=python)  
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14-blue?style=flat&logo=postgresql)  
 ![Docker](https://img.shields.io/badge/Docker-20.10-blue?style=flat&logo=docker)
 
 # Django Project - User Authentication
