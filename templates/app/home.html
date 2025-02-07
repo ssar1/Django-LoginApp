@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+{% if user.is_authenticated %}
+<h2>Welcome, {{ user.username }}</h2>
+
+<!-- ✅ Display Success Message -->
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+        {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<p>Email: {{ user.email }}</p>
+<p>Phone Number: {{ user.phone_number }}</p>  <!-- ✅ Display new field -->
+
+<p>Age: {{ user.age }}</p>  <!-- ✅ New field displayed -->
+
+
+<a href="{% url 'logout' %}">Logout</a>
+
+{% else %}
+<p>You are not logged in.</p>
+<a href="{% url 'login' %}">Login</a> |
+<a href="{% url 'signup' %}">Sign Up</a>
+{% endif %}
+
+</body>
+</html>
